@@ -1,13 +1,25 @@
-body{
+body {
     background-color: black;
-    
+
 }
 
-h1{
+.round {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(251, 127, 255);
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h1 {
     color: white;
 }
 
-.ball{
+.ball {
     width: 100px;
     height: 100px;
     border-radius: 50%;
