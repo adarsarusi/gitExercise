@@ -17,4 +17,6 @@ h1{
 
     font-size: 22px;
     font-weight: bold;
+
+    transition: all 1s linear 0s;
 }
