@@ -3,14 +3,13 @@
 var ballSize = 100
 var ballColor = ''
 
-function onBallClick() {
-    var elBall = document.querySelector('.ball')
+function onBallClick(elBall, maxDiameter) {
     ballSize += getRandomInt(20, 60)
     elBall.style.width = ballSize + 'px'
     elBall.style.height = ballSize + 'px'
     elBall.innerHTML = ballSize
 
-    if (ballSize > 400) {
+    if (ballSize > maxDiameter) {
         ballSize = 100
         elBall.style.width = ballSize + 'px'
         elBall.style.height = ballSize + 'px'
