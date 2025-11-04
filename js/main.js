@@ -20,3 +20,19 @@ function onBallClick(elBall, maxDiameter) {
     ballColor = getRandomColor()
     elBall.style.backgroundColor = ballColor
 }
+
+function onBall3Click(){
+    var elFirstBall = document.querySelector('.ball1')
+    var elSecondBall = document.querySelector('.ball2')
+
+    var heldColor = elSecondBall.style.backgroundColor
+    var heldSize = elSecondBall.style.width
+
+    elSecondBall.style.backgroundColor = elFirstBall.style.backgroundColor
+    elSecondBall.style.width = elFirstBall.style.width
+    elSecondBall.style.height = elFirstBall.style.width
+
+    elFirstBall.style.backgroundColor = heldColor
+    elFirstBall.style.width = heldSize
+    elFirstBall.style.height = heldSize
+}
