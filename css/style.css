@@ -1,8 +1,12 @@
 body {
     background-color: black;
-
+    
 }
 
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 h1 {
     color: white;
@@ -13,11 +17,13 @@ h1 {
     height: 100px;
     border-radius: 50%;
     text-align: center;
-    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
     transition: all 1s linear 0s;
+    align-content: center;
 }
 
 .ball1{
@@ -30,4 +36,8 @@ h1 {
 
 .ball3 {
     background-color: aquamarine;
+}
+
+.ball4{
+    background-color: blueviolet;
 }
