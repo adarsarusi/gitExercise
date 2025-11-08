@@ -1,6 +1,6 @@
 'use strict'
 
-var gBalls = [{ id: 'ball1', size: 100 , prevSize: 100}, { id: 'ball2', size: 100 , prevSize: 100}]
+var gBalls = [{ id: 'ball1', size: 100, prevSize: 100 }, { id: 'ball2', size: 100, prevSize: 100 }]
 
 function onBallClick(elBall, maxDiameter) {
 
@@ -45,7 +45,7 @@ function onBallClickSwap() {
     elSecondBall.style.width = ball2.size + 'px'
     elSecondBall.style.height = ball2.size + 'px'
     elSecondBall.innerHTML = ball2.size
-    
+
     elFirstBall.style.backgroundColor = ball1.color
     elFirstBall.style.width = ball1.size + 'px'
     elFirstBall.style.height = ball1.size + 'px'
@@ -74,7 +74,27 @@ function onBallClickReduce() {
     elSecondBall.innerHTML = ball2.size
 }
 
-function randomBgColor(){
+function resetGame() {
+    var elFirstBall = document.querySelector('.ball1')
+    var elSecondBall = document.querySelector('.ball2')
+
+    const ball1 = gBalls.find(ball => ball.id === elFirstBall.id)
+    const ball2 = gBalls.find(ball => ball.id === elSecondBall.id)
+
+    ball1.size = ball2.size = 100
+
+    elFirstBall.style.width = ball1.size + 'px'
+    elFirstBall.style.height = ball1.size + 'px'
+    elFirstBall.style.backgroundColor = 'blue'
+    elFirstBall.innerHTML = ball1.size
+
+    elSecondBall.style.width = ball2.size + 'px'
+    elSecondBall.style.height = ball2.size + 'px'
+    elSecondBall.style.backgroundColor = 'rgb(251, 127, 255)'
+    elSecondBall.innerHTML = ball2.size
+}
+
+function randomBgColor() {
     var elBody = document.querySelector('body')
     elBody.style.backgroundColor = getRandomColor()
 }
